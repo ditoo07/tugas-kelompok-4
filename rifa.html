@@ -2,36 +2,207 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Rifa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Rifa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff0f6, #ffe4ec);
+      color: #2e2e2e;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #ec4899;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      animation: fadeIn 1.2s ease 0.3s forwards;
+      opacity: 0;
+    }
+
+    .profile-card {
+      background-color: #fff;
+      border-radius: 1.2rem;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(236, 72, 153, 0.2);
+      transition: transform 0.3s ease;
+      animation: popUp 0.8s ease 0.6s forwards;
+      opacity: 0;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-card img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 4px solid #ec4899;
+      animation: fadeIn 1s ease 0.9s forwards;
+      opacity: 0;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #be185d;
+      animation: fadeUp 1s ease 1s forwards;
+      opacity: 0;
+    }
+
+    p {
+      margin-top: 0.8rem;
+      line-height: 1.6;
+      color: #4a4a4a;
+      animation: fadeUp 1s ease 1.2s forwards;
+      opacity: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 1rem;
+      text-align: left;
+      display: inline-block;
+      animation: fadeUp 1s ease 1.4s forwards;
+      opacity: 0;
+    }
+
+    li {
+      padding: 0.4rem 0;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #ec4899;
+      font-weight: 600;
+      transition: color 0.3s;
+      animation: fadeUp 1s ease 1.6s forwards;
+      opacity: 0;
+    }
+
+    a:hover {
+      color: #be185d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ffe4ec;
+      color: #6b7280;
+      font-size: 0.9rem;
+      animation: fadeUp 1s ease 1.8s forwards;
+      opacity: 0;
+    }
+
+    /* --- animasi --- */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popUp {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Profil Rifa Arsy Syarifah</h1>
-    </header>
+  <header>
+    <h1>Profil Rifa Arsy Syarifah</h1>
+  </header>
 
-    <main>
-        <img src="https://via.placeholder.com/250" alt="Rifa Arsy Syarifah">
-        <h2>UI Designer 🧩</h2>
-        <p>Rifa adalah desainer antarmuka tim yang berfokus pada tampilan web yang bersih, lembut, dan mudah digunakan.
-        </p>
+  <main>
+    <section class="profile-card">
+      <img src="rifa.jpeg" alt="Rifa Arsy Syarifah">
+      <h2>UI Designer 🧩</h2>
+      <p>Rifa adalah desainer antarmuka tim yang berfokus pada tampilan web yang bersih, lembut, dan mudah digunakan.</p>
 
-        <h3>✨ Keahlian</h3>
-        <ul>
-            <li>🎨 Desain Tampilan</li>
-            <li>📱 Wireframing</li>
-            <li>💡 Ide Kreatif</li>
-        </ul>
+      <h3>✨ Keahlian</h3>
+      <ul>
+        <li>🎨 Desain Tampilan</li>
+        <li>📱 Wireframing</li>
+        <li>💡 Ide Kreatif</li>
+      </ul>
 
-        <p><a href="index.html">← Kembali</a></p>
-    </main>
+      <a href="index.html">← Kembali</a>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2025 Our Team Gallery</p>
-    </footer>
+  <footer>
+    <p>© 2025 Our Team Gallery</p>
+  </footer>
 
 </body>
 
