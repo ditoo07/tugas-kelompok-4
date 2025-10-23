@@ -2,34 +2,206 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Tiara</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Tiara</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f0f4ff, #dbe4ff);
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #14428b;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      animation: fadeIn 1.2s ease 0.3s forwards;
+      opacity: 0;
+    }
+
+    .profile-card {
+      background-color: #fff;
+      border-radius: 1.2rem;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      animation: popUp 0.8s ease 0.6s forwards;
+      opacity: 0;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-card img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 4px solid #193f7c;
+      animation: fadeIn 1s ease 0.9s forwards;
+      opacity: 0;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #334155;
+      animation: fadeInUp 1s ease 1s forwards;
+      opacity: 0;
+    }
+
+    p {
+      margin-top: 0.8rem;
+      line-height: 1.6;
+      color: #475569;
+      animation: fadeInUp 1s ease 1.2s forwards;
+      opacity: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 1rem;
+      text-align: left;
+      display: inline-block;
+      animation: fadeInUp 1s ease 1.4s forwards;
+      opacity: 0;
+    }
+
+    li {
+      padding: 0.4rem 0;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #062c69;
+      font-weight: 600;
+      transition: color 0.3s;
+      animation: fadeInUp 1s ease 1.6s forwards;
+      opacity: 0;
+    }
+
+    a:hover {
+      color: #1d4ed8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1f5f9;
+      color: #64748b;
+      font-size: 0.9rem;
+      animation: fadeInUp 1s ease 1.8s forwards;
+      opacity: 0;
+    }
+
+    /* --- ANIMASI --- */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popUp {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Profil Tiara Dwi Anugrah</h1>
-    </header>
+  <header>
+    <h1>Profil Tiara Dwi Anugrah</h1>
+  </header>
 
-    <main>
-        <img src="https://via.placeholder.com/250" alt="Tiara Dwi Anugrah">
-        <h2>UX Designer 🌟</h2>
-        <p>Tiara fokus pada pengalaman pengguna agar tampilan web terasa mudah digunakan dan menyenangkan.</p>
+  <main>
+    <section class="profile-card">
+      <img src="tiara.png" alt="Tiara Dwi Anugrah">
+      <h2>UX Designer 🌟</h2>
+      <p>Tiara fokus pada pengalaman pengguna agar tampilan web terasa mudah digunakan dan menyenangkan.</p>
 
-        <h3>🌟 Keahlian</h3>
-        <ul>
-            <li>🔎 Riset Pengguna</li>
-            <li>📐 Prototyping</li>
-            <li>🎯 Analisis Pengalaman</li>
-        </ul>
-        <p><a href="index.html">← Kembali</a></p>
-    </main>
+      <h3>🌟 Keahlian</h3>
+      <ul>
+        <li>🔎 Riset Pengguna</li>
+        <li>📐 Prototyping</li>
+        <li>🎯 Analisis Pengalaman</li>
+      </ul>
+      <a href=".html">← Kembali</a>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2025 Our Team Gallery</p>
-    </footer>
+  <footer>
+    <p>© 2025 Our Team Gallery</p>
+  </footer>
 
 </body>
 
